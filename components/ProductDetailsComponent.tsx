@@ -17,6 +17,7 @@ import { ProductDetails } from "@/types/productDetailsComp";
 import { useCartContext } from "@/app/context/CartContext";
 import { addProductToCart } from "@/app/actions/cart.action";
 import toast from "react-hot-toast";
+import { Swiper as SwiperType } from 'swiper/types';
 
 export default function ProductDetailsComponent({productDetails}:{productDetails:ProductDetails}) {
 
@@ -28,7 +29,7 @@ export default function ProductDetailsComponent({productDetails}:{productDetails
       await fetchCartData()
     }
 
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
   return (
     <div className="w-full max-w-6xl mx-auto  bg-white">
       <div className="flex flex-col md:flex-row gap-8 items-center">

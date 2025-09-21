@@ -2,7 +2,8 @@
 
 import React, { useRef, useState } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper , SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType } from 'swiper/types';
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,7 +14,7 @@ import { Navigation } from "swiper/modules";
 import Image from "next/image";
 
 export default function Landing() {
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
   return (
     <div className=" flex container mx-auto text-center flex-col sm:flex-row w-[75vw] md:w-[50vw] h-[100vh] sm:h-[70vh] md:h-[60vh] bg-slate-200 md:aspect-[4/4] lg:aspect-[5/4] mt-20">
       <div className="relative sm:w-1/2 bg-red-300 h-full w-full">

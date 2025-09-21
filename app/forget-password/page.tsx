@@ -110,7 +110,7 @@ const PasswordResetFlow = () => {
         <Mail className="mx-auto h-12 w-12 text-blue-500 mb-4" />
         <h2 className="text-2xl font-bold text-gray-900">Reset Your Password</h2>
         <p className="text-gray-600 mt-2">
-          Enter your email address and we'll send you a verification code.
+          Enter your email address and we&lsquo;ll send you a verification code.
         </p>
       </div>
       
@@ -147,7 +147,7 @@ const PasswordResetFlow = () => {
         <KeyRound className="mx-auto h-12 w-12 text-green-500 mb-4" />
         <h2 className="text-2xl font-bold text-gray-900">Enter Verification Code</h2>
         <p className="text-gray-600 mt-2">
-          We've sent a verification code to <strong>{email}</strong>
+          We&lsquo;ve sent a verification code to <strong>{email}</strong>
         </p>
       </div>
       
@@ -239,7 +239,7 @@ const PasswordResetFlow = () => {
             disabled={isLoading}
           />
           {newPassword && confirmPassword && newPassword !== confirmPassword && (
-            <p className="text-red-500 text-sm mt-1">Passwords don't match</p>
+            <p className="text-red-500 text-sm mt-1">Passwords don&lsquo;t match</p>
           )}
         </div>
         

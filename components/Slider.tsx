@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { Swiper as SwiperType } from 'swiper/types';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,7 +16,7 @@ import { Category } from "@/types/category";
 export default function Slider({category}:{category:Category[]}) {
 
 const [mounted, setMounted] = useState(false);
-const swiperRef = useRef<any>(null);
+const swiperRef = useRef<SwiperType | null>(null);
 useEffect(() => setMounted(true), []);
 
   if (!mounted) {
