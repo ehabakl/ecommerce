@@ -24,7 +24,8 @@ export default function CartContextProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [cartDetails, setCartDetails] = useState(null);
+  const [cartDetails, setCartDetails] = useState<CartData | null>(null);
+
 
 
   async function fetchCartData (){
