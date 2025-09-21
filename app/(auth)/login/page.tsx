@@ -6,12 +6,12 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import React from "react";
 
-import { useRouter } from "next/navigation";
+
 import { signIn } from 'next-auth/react';
 import { useCartContext } from "@/app/context/CartContext";
 
 export default function Login() {
-  const router = useRouter()
+ 
   const [errorMessage, setErrorMessage] = useState(null)
   const {fetchCartData} = useCartContext()
   interface Inputs {
@@ -39,12 +39,11 @@ export default function Login() {
        const responnse = await signIn('credentials',{
         email: values.email,
         password: values.password,
-        redirect: false
+           redirect: true, 
+           callbackUrl: '/' 
        })
-       console.log(responnse);
        if(responnse?.ok){
         await fetchCartData()
-        router.push('/')
        }
     } catch (error ) {
      console.log(error);

@@ -40,7 +40,6 @@ export default function Register() {
    
     try {
        const responnse = await axios.post("https://ecommerce.routemisr.com/api/v1/auth/signup", values);
-    console.log(responnse.data);
     setErrorMessage(null)
     if(responnse?.data?.message === "success") {
       router.push("/login")
@@ -72,8 +71,7 @@ export default function Register() {
     if (fieldName === "password" &&  rePasswordValue === passwordValue  ) {
       await trigger("rePassword");
     }
-    console.log(rePasswordValue , "rePasswordValue")
-    console.log(passwordValue , "passwordValue")
+   
   };
 
 

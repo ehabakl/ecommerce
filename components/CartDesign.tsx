@@ -20,7 +20,6 @@ export default function CartShop() {
 
   const cartItemsNum = cartDetails?.numOfCartItems || 0;
 
-  console.log(cartDetails, "cartttttttttttttttttt");
 
   useEffect(() => {
     const loadData = async () => {
@@ -34,19 +33,16 @@ export default function CartShop() {
 
   async function handleDeleteProduct(productId: string) {
     const response = await removeProductFromCart(productId);
-    console.log(response, "res after delete");
     toast.success("product deleted successfully");
     await fetchCartData();
   }
   async function handleUpdateProductCart(productId: string, count: number) {
     const response = await updateCartProduct(productId, count);
-    console.log(response, "res after delete");
     toast.success("product updated successfully");
     await fetchCartData();
   }
   async function handleClearCart() {
     const response = await cleartUserCart();
-    console.log(response, "res after delete");
     toast.success("cart cleared successfully");
     await fetchCartData();
   }

@@ -22,7 +22,6 @@ interface ShippingAdressType {
         },
     });
     
- console.log(response , "payment response");
     
     
     return {
@@ -59,7 +58,6 @@ interface ShippingAdressType {
         },
     });
     
- console.log(response , "payment response");
     
     
     return {

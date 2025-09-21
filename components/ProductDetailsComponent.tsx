@@ -24,7 +24,6 @@ export default function ProductDetailsComponent({productDetails}:{productDetails
    const {fetchCartData} = useCartContext();
     async function handleAddToCart (productId : string){
       const response = await addProductToCart(productId);
-      console.log(response);
       toast.success(response?.message);
       await fetchCartData()
     }

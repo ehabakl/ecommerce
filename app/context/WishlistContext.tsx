@@ -35,7 +35,6 @@ export default function WishlistContextProvider({
     const response = await getUserWishlist()
     setWishlistDetails(response?.data?.data)
     setWishListMainData(response?.data)
-    console.log(response?.data , " response from fetch context")
   }
 
   useEffect(() => {

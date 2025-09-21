@@ -78,7 +78,6 @@ const PasswordResetFlow = () => {
         }),
       });
 
-      console.log(response)
       
       if (response.ok) {
         toast.success('Password reset successful!');

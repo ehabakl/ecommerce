@@ -32,7 +32,6 @@ export default function Checkout() {
   });
 
   async function onSubmit(values: Inputs) {
-    console.log(paymentMethod, "paymentMethod");
 
 
     if (paymentMethod === "cash"){
@@ -55,7 +54,6 @@ export default function Checkout() {
       const response = await payOnline(cartId as string, values);
 
       if (response?.data?.status === "success") {
-        console.log(response.data)
         // setCartDetails(null);
         // router.push("/");
         window.location.href = response.data.session.url

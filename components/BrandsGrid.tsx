@@ -12,7 +12,6 @@ export interface Brand {
 export default async function  BrandsGrid ()  {
 const response = await getBrands()
   const brands  = response?.data
-console.log(brands)
 
 
   return (
