@@ -65,13 +65,13 @@ export default function Landing() {
         <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-3 z-50">
           {/* Prev bullet */}
           <button
-            onClick={() => swiperRef.current.slidePrev()}
+            onClick={() => swiperRef?.current?.slidePrev()}
             className="w-4 h-2  rounded-full cursor-pointer bg-gray-400 hover:bg-green-500 transition"
           ></button>
 
           {/* Next bullet */}
           <button
-            onClick={() => swiperRef.current.slideNext()}
+            onClick={() => swiperRef?.current?.slideNext()}
             className="w-4 h-2 rounded-full cursor-pointer bg-gray-400 hover:bg-green-500 transition"
           ></button>
         </div>
