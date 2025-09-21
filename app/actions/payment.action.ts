@@ -2,14 +2,14 @@ import { getUserToken } from "@/lib/token.utils";
 import axios from "axios";
 
 interface ShippingAdressType {
-  details: "detail";
-  phone: "01010800921";
-  city: "Cairo";
+  details: string;
+  phone: number;
+  city: string;
 }
 
   async function payInCash(
   cartId: string,
-  shippingAdress: { shippingAdress: ShippingAdressType }
+  shippingAdress:ShippingAdressType
 ) {
 
   try {
@@ -46,7 +46,7 @@ interface ShippingAdressType {
 }
   async function payOnline(
   cartId: string,
-  shippingAdress: { shippingAdress: ShippingAdressType }
+  shippingAdress:  ShippingAdressType 
 ) {
 
   try {
