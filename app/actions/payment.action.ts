@@ -17,7 +17,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"
 
   try {
     const token = await getUserToken()
-    const response = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/${cartId}` ,
+    const response = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/${cartId}/allorders` ,
       {shippingAdress}
       ,{
         headers : { 
