@@ -7,6 +7,9 @@ interface ShippingAdressType {
   city: string;
 }
 
+
+const BASE_URL = process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000";
+
   async function payInCash(
   cartId: string,
   shippingAdress:ShippingAdressType
@@ -50,7 +53,7 @@ interface ShippingAdressType {
 
   try {
     const token = await getUserToken()
-    const response = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://localhost:3000` ,
+    const response = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=${BASE_URL}` ,
       {shippingAdress}
       ,{
         headers : { 
