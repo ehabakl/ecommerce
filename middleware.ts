@@ -58,5 +58,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/cart', '/wishList', '/products', '/categories', '/brands' , "/allorders"],
+  matcher: ['/', '/cart', '/wishList', '/products', '/categories', '/brands' ],
 }
