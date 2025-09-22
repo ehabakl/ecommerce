@@ -17,7 +17,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"
 
   try {
     const token = await getUserToken()
-    const response = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/${cartId}/allorders` ,
+    const response = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/${cartId}` ,
       {shippingAdress}
       ,{
         headers : { 
@@ -53,7 +53,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"
 
   try {
     const token = await getUserToken()
-    const response = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=${BASE_URL}` ,
+    const response = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=${BASE_URL}/allorders` ,
       {shippingAdress}
       ,{
         headers : { 
